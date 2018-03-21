@@ -24,14 +24,16 @@ class App extends Component {
 
   render() {
     let result = "Incorrect Answer";
+    let background ="Incorrect";
     let disable = false;
 
     if (this.state.id1 === this.state.answers[0].correct && this.state.id2 === this.state.answers[1].correct && this.state.id3 === this.state.answers[2].correct) {
       result="Correct Answer";
       disable=true;
+      background="Correct";
     }
     return (
-      <div className="App" >
+      <div className={background} >
         <header className="App-header">
           <h1 >{this.state.question}</h1>
         </header>
